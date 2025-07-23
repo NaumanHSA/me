@@ -11,23 +11,53 @@
     <script>
         window.addEventListener("DOMContentLoaded", () => {
             const isProd = location.hostname === "naumanhsa.github.io";
-            // Load CSS
+            const prefix = isProd ? "/me" : "";
+
+            // Inject global stylesheet
             const link = document.createElement("link");
             link.rel = "stylesheet";
-            link.href = (isProd ? "/me" : "") + "/src/styles/global.css";
+            link.href = `${prefix}/src/styles/global.css`;
             link.setAttribute("data-precedence", "next");
             document.head.appendChild(link);
-    
-            // Preload Font
+
+            // Preload custom font
             const preloadFont = document.createElement("link");
             preloadFont.rel = "preload";
-            preloadFont.href = (isProd ? "/me" : "") + "/src/fonts/66f30814ff6d7cdf.p.woff2";
+            preloadFont.href = `${prefix}/src/fonts/66f30814ff6d7cdf.p.woff2`;
             preloadFont.as = "font";
             preloadFont.type = "font/woff2";
             preloadFont.crossOrigin = "*";
             document.head.appendChild(preloadFont);
+
+            // Inject @font-face and utility classes
+            const style = document.createElement("style");
+            style.textContent = `
+                @font-face {
+                    font-family: GeistMono;
+                    src: url("${prefix}/src/fonts/66f30814ff6d7cdf.p.woff2") format("woff2");
+                    font-display: swap;
+                    font-weight: 100 900;
+                }
+    
+                .__className_c1e5c9 {
+                    font-family: GeistMono, ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+                }
+    
+                .__variable_c1e5c9 {
+                    --font-geist-mono: "GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Set global CSS variable
+            document.documentElement.style.setProperty(
+                "--font-geist-mono",
+                '"GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace'
+            );
         });
     </script>
+
+
 
     <title>🚀 CodeMind: AI-Powered Code Intelligence Platform</title>
     <meta charset="UTF-8">
@@ -44,7 +74,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
-    <link rel="shortcut icon" href="src/favico.svg">
+    <link rel="shortcut icon" href="src/media/favico.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -104,7 +134,7 @@
 </a> -->
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Enigma</strong> is a Python package and CLI tool that simulates the iconic <strong>World War II Enigma machine</strong>. With customizable settings for rotors, ring positions, reflectors, and plugboard wiring, Enigma offers an authentic simulation experience for cryptography enthusiasts, educators, and developers.</p>
 
-<section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="features"><h2 class="text-[1.7rem] font-[750] mb-4">✨ Features</h2><ul class="list-disc pl-12 space-y-0">
+<section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="features"><h2 class="text-[1.7rem] font-[750] mb-4">✨ Features</h2><ul class="list-disc pl-12 space-y-0">
 <li>✅ Accurate simulation of historical Enigma encoding behavior</li>
 <li>✅ Support for custom rotors, initial positions, ring settings, and notches</li>
 <li>✅ Plugboard (Steckerbrett) configuration for realistic signal switching</li>
@@ -114,11 +144,11 @@
 <li>✅ Python class for programmatic use in scripts or teaching tools</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="cli-usage"><h2 class="text-[1.7rem] font-[750] mb-4">🧪 CLI Usage</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Once installed, you can encode text directly from the terminal using the <code class="inline-code">enigma</code> command:</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="cli-usage"><h2 class="text-[1.7rem] font-[750] mb-4">🧪 CLI Usage</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Once installed, you can encode text directly from the terminal using the <code class="inline-code">enigma</code> command:</p>
 <pre><code class="code-block">enigma "HELLO" --rotors="I II III" --initial-positions="A A A" --ring-settings="01 01 01" --plugleads="HA YZ" --verbose=2
 </code></pre>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="cli-options"><h2 class="text-[1.7rem] font-[750] mb-4">🛠️ CLI Options</h2><table>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="cli-options"><h2 class="text-[1.7rem] font-[750] mb-4">🛠️ CLI Options</h2><table>
 <thead>
 <tr>
 <th>Argument</th>
@@ -179,7 +209,7 @@
 </tbody>
 </table>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="example-output-verbose-mode"><h2 class="text-[1.7rem] font-[750] mb-4">🖥️ Example Output (Verbose Mode)</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">When <code class="inline-code">--verbose=2</code>, the simulator prints detailed logs including rotor setups, placements, and per-character encoding paths.</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="example-output-verbose-mode"><h2 class="text-[1.7rem] font-[750] mb-4">🖥️ Example Output (Verbose Mode)</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">When <code class="inline-code">--verbose=2</code>, the simulator prints detailed logs including rotor setups, placements, and per-character encoding paths.</p>
 <pre><code class="code-block">########################################## Rotors Settings ##########################################
 ----------------------------------------------------------------------------------------------------
 Rotor    | Ring  | Initial Pos  | Notch        | Forward Mapping
@@ -216,14 +246,14 @@ Encoded String: KCUBR
 ####################################################################################################
 </code></pre>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="use-cases"><h2 class="text-[1.7rem] font-[750] mb-4">🧩 Use Cases</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="use-cases"><h2 class="text-[1.7rem] font-[750] mb-4">🧩 Use Cases</h2><ul class="list-disc pl-12 space-y-0">
 <li>🧑‍🏫 <strong>Educational tool</strong> for teaching classical cryptography</li>
 <li>🧪 <strong>Simulation and analysis</strong> of historical encoding mechanisms</li>
 <li>🛠️ <strong>Scripting support</strong> for bulk encoding or testing Enigma logic</li>
 <li>💡 <strong>Exploration</strong> of rotor stepping mechanics and signal paths</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="programmatic-access"><h2 class="text-[1.7rem] font-[750] mb-4">🐍 Programmatic Access</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">In addition to the CLI, the core <code class="inline-code">Enigma</code> class can be imported into Python scripts for use in custom applications, Jupyter notebooks, or crypto research.</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="programmatic-access"><h2 class="text-[1.7rem] font-[750] mb-4">🐍 Programmatic Access</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">In addition to the CLI, the core <code class="inline-code">Enigma</code> class can be imported into Python scripts for use in custom applications, Jupyter notebooks, or crypto research.</p>
 <pre><code class="code-block">from enigma import Enigma
 
 e = Enigma(rotors=["I", "II", "III"], ring_settings=["01", "01", "01"], initial_positions=["A", "A", "A"], plugboard={"A": "H", "Y": "Z"})

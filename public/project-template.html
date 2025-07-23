@@ -3,32 +3,52 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- <link rel="preload" href="../../src/fonts/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*" type="font/woff2">
-    <link rel="stylesheet" href="../../src/styles/global.css" data-precedence="next"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
             const isProd = location.hostname === "naumanhsa.github.io";
-            // Load CSS
+            const prefix = isProd ? "/me" : "";
+
+            // Inject global stylesheet
             const link = document.createElement("link");
             link.rel = "stylesheet";
-            link.href = (isProd ? "/me" : "") + "/src/styles/global.css";
+            link.href = `${prefix}/src/styles/global.css`;
             link.setAttribute("data-precedence", "next");
             document.head.appendChild(link);
-    
-            // Preload Font
+
+            // Preload custom font
             const preloadFont = document.createElement("link");
             preloadFont.rel = "preload";
-            preloadFont.href = (isProd ? "/me" : "") + "/src/fonts/66f30814ff6d7cdf.p.woff2";
+            preloadFont.href = `${prefix}/src/fonts/66f30814ff6d7cdf.p.woff2`;
             preloadFont.as = "font";
             preloadFont.type = "font/woff2";
             preloadFont.crossOrigin = "*";
             document.head.appendChild(preloadFont);
+
+            // Inject @font-face and utility classes
+            const style = document.createElement("style");
+            style.textContent = `
+                @font-face {
+                    font-family: GeistMono;
+                    src: url("${prefix}/src/fonts/66f30814ff6d7cdf.p.woff2") format("woff2");
+                    font-display: swap;
+                    font-weight: 100 900;
+                }
+                .__variable_c1e5c9 {
+                    --font-geist-mono: "GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Set global CSS variable
+            document.documentElement.style.setProperty(
+                "--font-geist-mono",
+                '"GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace'
+            );
         });
     </script>
-
     <title>🚀 CodeMind: AI-Powered Code Intelligence Platform</title>
     <meta charset="UTF-8">
     <link rel="manifest" href="manifest.webmanifest">
@@ -44,7 +64,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
-    <link rel="shortcut icon" href="src/favico.svg">
+    <link rel="shortcut icon" href="src/media/favico.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">

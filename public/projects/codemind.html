@@ -3,31 +3,59 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- <link rel="preload" href="../../src/fonts/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*" type="font/woff2">
-    <link rel="stylesheet" href="../../src/styles/global.css" data-precedence="next"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
             const isProd = location.hostname === "naumanhsa.github.io";
-            // Load CSS
+            const prefix = isProd ? "/me" : "";
+
+            // Inject global stylesheet
             const link = document.createElement("link");
             link.rel = "stylesheet";
-            link.href = (isProd ? "/me" : "") + "/src/styles/global.css";
+            link.href = `${prefix}/src/styles/global.css`;
             link.setAttribute("data-precedence", "next");
             document.head.appendChild(link);
 
-            // Preload Font
+            // Preload custom font
             const preloadFont = document.createElement("link");
             preloadFont.rel = "preload";
-            preloadFont.href = (isProd ? "/me" : "") + "/src/fonts/66f30814ff6d7cdf.p.woff2";
+            preloadFont.href = `${prefix}/src/fonts/66f30814ff6d7cdf.p.woff2`;
             preloadFont.as = "font";
             preloadFont.type = "font/woff2";
             preloadFont.crossOrigin = "*";
             document.head.appendChild(preloadFont);
+
+            // Inject @font-face and utility classes
+            const style = document.createElement("style");
+            style.textContent = `
+                @font-face {
+                    font-family: GeistMono;
+                    src: url("${prefix}/src/fonts/66f30814ff6d7cdf.p.woff2") format("woff2");
+                    font-display: swap;
+                    font-weight: 100 900;
+                }
+    
+                .__className_c1e5c9 {
+                    font-family: GeistMono, ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+                }
+    
+                .__variable_c1e5c9 {
+                    --font-geist-mono: "GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Set global CSS variable
+            document.documentElement.style.setProperty(
+                "--font-geist-mono",
+                '"GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace'
+            );
         });
     </script>
+
+
 
     <title>🚀 CodeMind: AI-Powered Code Intelligence Platform</title>
     <meta charset="UTF-8">
@@ -44,7 +72,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
-    <link rel="shortcut icon" href="src/favico.svg">
+    <link rel="shortcut icon" href="src/media/favico.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
@@ -109,7 +137,8 @@
             explorable knowledge systems. Whether you're exploring a legacy repository or onboarding a new project,
             CodeMind provides instant, intelligent insights—powered by cutting-edge large language models.</p>
 
-        <section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+        <section
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
             id="what-is-codemind">
             <h2 class="text-[1.7rem] font-[750] mb-4">🧠 What is CodeMind?</h2>
             <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a smart code
@@ -127,7 +156,7 @@
 
         </section>
         <section
-            class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
             id="key-capabilities">
             <h2 class="text-[1.7rem] font-[750] mb-4">✨ Key Capabilities</h2>
             <h3 class="font-bold mt-6">🧠 Agentic Workflows with ReactAgent</h3>
@@ -264,8 +293,7 @@
             </ul>
 
         </section>
-        <section
-            class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+        <section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
             id="use-cases">
             <h2 class="text-[1.7rem] font-[750] mb-4">💡 Use Cases</h2>
             <ul class="list-disc pl-12 space-y-0">
@@ -277,7 +305,7 @@
             </ul>
 
         </section>
-        <section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+        <section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
             id="why-codemind">
             <h2 class="text-[1.7rem] font-[750] mb-4">🌟 Why CodeMind?</h2>
             <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">CodeMind isn’t just a code viewer. It’s a
