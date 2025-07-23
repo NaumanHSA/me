@@ -1,0 +1,17 @@
+{
+    "name": "Muhammad Nouman Ahsan",
+    "short_name": "Muhammad Nouman Ahsan",
+    "description": "I'm a builder at heart — turning ideas into intelligent, working systems.",
+    "start_url": "/?source=pwa",
+    "scope": "/",
+    "display": "minimal-ui",
+    "background_color": "#101011",
+    "theme_color": "#151515",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon"
+        }
+    ]
+}
