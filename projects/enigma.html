@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" style="color-scheme: dark; --hidden: block;">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preload" href="src/static/media/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*"
+        type="font/woff2">
+    <link rel="stylesheet" href="src/static/css/937e0c2fea8d5dce.css" data-precedence="next">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>🔐 Enigma — Enigma Machine Simulator</title>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="description" content="Gen AI Engineer">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1">
+    <meta property="og:title" content="Nouman Ahsan - Portfolio">
+    <meta property="og:description" content="Gen AI Engineer">
+    <meta property="og:site_name" content="Nouman Ahsan - Portfolio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Nouman Ahsan - Gen AI Engineer">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="src/favico.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+    <base id="base-tag" href="">
+    <script>
+        (function () {
+            const isProd = location.hostname === "naumanhsa.github.io";
+            const base = document.getElementById("base-tag");
+            if (isProd) {
+                base.setAttribute("href", "/me/");
+            } else {
+
+                base.setAttribute("href", "/");
+            }
+        })();
+    </script>
+</head>
+
+<body class="antialiase relative scroll-smooth px-6 font-mono __variable_c1e5c9">
+
+    <!-- Header -->
+    <nav class="z-50 mx-auto flex w-full max-w-screen-lg items-center pt-9 font-mono"><a
+            class="dynamic-link text-lg font-black text-neutral-800 duration-300 motion-reduce:transition-none dark:text-white mr-6"
+            data-urlid="website">MNA<span
+                class="bg-gradient-to-r from-[#6310ff] to-[#14291ff] box-decoration-clone bg-clip-text text-fill-transparent dark:from-[#a2facf] dark:to-[#64acff]">.</span></a>
+        <div class="flex flex-grow justify-start">
+            <div class="hidden gap-4 lg:inline-flex items-center"><a
+                    class="dynamic-link relative rounded-md px-2 py-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2 bg-black/10 dark:bg-white/10 dark:text-neutral-200"
+                    href="#about-me" data-urlid="website">
+                    About Me
+                </a>
+                <a class="dynamic-link relative rounded-md px-2 py-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2 text-neutral-700 dark:text-neutral-400"
+                    href="#work-experience" data-urlid="website">
+                    Work Experience
+                </a>
+                <a class="dynamic-link relative rounded-md px-2 py-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2 text-neutral-700 dark:text-neutral-400"
+                    href="#featured-projects" data-urlid="website">
+                    Featured Projects
+                </a>
+
+                <a class="dynamic-link relative rounded-md px-2 py-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2 text-neutral-700 dark:text-neutral-400"
+                    href="#testimonials" data-urlid="website">
+                    Testimonial
+                </a>
+                <a class="dynamic-link relative rounded-md px-2 py-1 transition-all hover:bg-black/10 hover:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-200 sm:px-3 sm:py-2 text-neutral-700 dark:text-neutral-400"
+                    href="#contact-me" data-urlid="website">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mx-auto min-h-screen w-full max-w-screen-lg llm-section">
+        <div class="mt-8 mb-12">
+            <h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
+                style="opacity: 1; transform: none;">🔐 Enigma — Enigma Machine Simulator</h1>
+        </div><!-- <a href="https://github.com/your-username/enigma" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
+</a> -->
+        <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Enigma</strong> is a Python package and
+            CLI tool that simulates the iconic <strong>World War II Enigma machine</strong>. With customizable settings
+            for rotors, ring positions, reflectors, and plugboard wiring, Enigma offers an authentic simulation
+            experience for cryptography enthusiasts, educators, and developers.</p>
+
+        <section
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="features">
+            <h2 class="text-[1.7rem] font-[750] mb-4">✨ Features</h2>
+            <ul class="list-disc pl-12 space-y-0">
+                <li>✅ Accurate simulation of historical Enigma encoding behavior</li>
+                <li>✅ Support for custom rotors, initial positions, ring settings, and notches</li>
+                <li>✅ Plugboard (Steckerbrett) configuration for realistic signal switching</li>
+                <li>✅ Reflector customization (e.g., A, B, etc.)</li>
+                <li>✅ Easy-to-use CLI interface for terminal operation</li>
+                <li>✅ Adjustable verbosity for tracing detailed encoding paths</li>
+                <li>✅ Python class for programmatic use in scripts or teaching tools</li>
+            </ul>
+
+        </section>
+        <section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="cli-usage">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🧪 CLI Usage</h2>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Once installed, you can encode text directly
+                from the terminal using the <code class="inline-code">enigma</code> command:</p>
+            <pre><code class="code-block">enigma "HELLO" --rotors="I II III" --initial-positions="A A A" --ring-settings="01 01 01" --plugleads="HA YZ" --verbose=2
+</code></pre>
+
+        </section>
+        <section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="cli-options">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🛠️ CLI Options</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Argument</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Default</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code class="inline-code">text</code></td>
+                        <td><code class="inline-code">string</code></td>
+                        <td>Text to encode (required)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">--rotors</code></td>
+                        <td><code class="inline-code">string</code></td>
+                        <td>Rotor names (e.g., <code class="inline-code">"I II III"</code>)</td>
+                        <td><code class="inline-code">"I II III"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">--ring-settings</code></td>
+                        <td><code class="inline-code">string</code></td>
+                        <td>Ring settings for rotors</td>
+                        <td><code class="inline-code">"01 01 01"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">--initial-positions</code></td>
+                        <td><code class="inline-code">string</code></td>
+                        <td>Rotor start positions</td>
+                        <td><code class="inline-code">"A A A"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">--notch-positions</code></td>
+                        <td><code class="inline-code">string</code></td>
+                        <td>Override default notch positions</td>
+                        <td><code class="inline-code">None</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">--reflector</code></td>
+                        <td><code class="inline-code">string</code></td>
+                        <td>Reflector type (e.g., <code class="inline-code">"B"</code>)</td>
+                        <td><code class="inline-code">"A"</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">--plugleads</code></td>
+                        <td><code class="inline-code">string</code></td>
+                        <td>Plugboard connections (e.g., <code class="inline-code">"AB CD"</code>)</td>
+                        <td><code class="inline-code">None</code></td>
+                    </tr>
+                    <tr>
+                        <td><code class="inline-code">--verbose</code></td>
+                        <td><code class="inline-code">int (0-2)</code></td>
+                        <td>Output verbosity (0 = silent, 2 = full trace)</td>
+                        <td><code class="inline-code">1</code></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="example-output-verbose-mode">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🖥️ Example Output (Verbose Mode)</h2>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">When <code
+                    class="inline-code">--verbose=2</code>, the simulator prints detailed logs including rotor setups,
+                placements, and per-character encoding paths.</p>
+            <pre><code class="code-block">########################################## Rotors Settings ##########################################
+----------------------------------------------------------------------------------------------------
+Rotor    | Ring  | Initial Pos  | Notch        | Forward Mapping
+----------------------------------------------------------------------------------------------------
+I        | 1     | A (index 0 ) | Q (index 16) | EKMFLGDQVZNTOWYHXUSPAIBRCJ
+...
+
+######################################### Rotors Placement #########################################
+----------------------------------------------------------------------------------------------------
+Left Rotor | Current Rotor | Right Rotor
+----------------------------------------------------------------------------------------------------
+N/A        | I             | II
+...
+
+##################################### Characters Encoding Paths #####################################
+----------------------------------------------------------------------------------------------------
+INPUT: H
+Plugboard (HA)  : H =&gt; A
+Forward   (III) : H -&gt; +1 =&gt; I -&gt; wiring =&gt; Q -&gt; -1 =&gt; Q
+Forward   (II)  : Q -&gt; +0 =&gt; Q -&gt; wiring =&gt; Q -&gt; -0 =&gt; Q
+Forward   (I)   : Q -&gt; +0 =&gt; Q -&gt; wiring =&gt; X -&gt; -0 =&gt; X
+Reflector (A)   : X =&gt; H
+Backward  (I)   : H -&gt; +0 =&gt; H -&gt; inverse wiring =&gt; P -&gt; -0 =&gt; P
+Backward  (II)  : P -&gt; +0 =&gt; P -&gt; inverse wiring =&gt; U -&gt; -0 =&gt; U
+Backward  (III) : U -&gt; +1 =&gt; V -&gt; inverse wiring =&gt; L -&gt; -1 =&gt; K
+Plugboard (N/A) : K =&gt; K
+ENCODED: K
+----------------------------------------------------------------------------------------------------
+...(Repeated for each character)
+
+######################################### Encoding Complete #########################################
+Input String:   HELLO
+Encoded String: KCUBR
+####################################################################################################
+</code></pre>
+
+        </section>
+        <section
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="use-cases">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🧩 Use Cases</h2>
+            <ul class="list-disc pl-12 space-y-0">
+                <li>🧑‍🏫 <strong>Educational tool</strong> for teaching classical cryptography</li>
+                <li>🧪 <strong>Simulation and analysis</strong> of historical encoding mechanisms</li>
+                <li>🛠️ <strong>Scripting support</strong> for bulk encoding or testing Enigma logic</li>
+                <li>💡 <strong>Exploration</strong> of rotor stepping mechanics and signal paths</li>
+            </ul>
+
+        </section>
+        <section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="programmatic-access">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🐍 Programmatic Access</h2>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">In addition to the CLI, the core <code
+                    class="inline-code">Enigma</code> class can be imported into Python scripts for use in custom
+                applications, Jupyter notebooks, or crypto research.</p>
+            <pre><code class="code-block">from enigma import Enigma
+
+e = Enigma(rotors=["I", "II", "III"], ring_settings=["01", "01", "01"], initial_positions=["A", "A", "A"], plugboard={"A": "H", "Y": "Z"})
+cipher_text = e.encode("HELLO")
+print(cipher_text)  # KCUBR
+</code></pre>
+
+            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Enigma</strong> brings the classic
+                encryption machine to life with modern tooling — letting you explore history and cryptography from your
+                terminal or code editor.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div class="noise pointer-events-none absolute inset-0"></div>
+    <div class="color-rays"></div>
+
+    <footer class="mx-auto w-full max-w-screen-md pb-12">
+    <hr class="mx-auto mb-5 w-full border border-neutral-200 dark:border-neutral-800">
+    <p class="mb-4 text-sm text-neutral-700 opacity-50 dark:text-neutral-300">Copyright © 2021 - <!-- -->2025<!-- -->
+      Nouman Ahsan</p>
+    <div class="flex justify-around gap-4 md:justify-between">
+      <div class="text-neutral-700 dark:text-neutral-400 text-white max-w-[40%] hidden md:block">
+        <h2 class="text-xl font-bold mb-0 text-white">Nouman Ahsan</h2>
+        <p>
+          To seamlessly connect innovation with implementation — delivering thoughtful, AI-driven technologies
+          that solve real-world problems.
+        </p>
+      </div>
+
+      <div class="text-neutral-700 dark:text-neutral-400">
+        <p class="mb-2 mt-1 uppercase font-bold text-neutral-800 dark:text-white">Navigation</p>
+        <a target="_self"
+          class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+          href="#home">Home</a>
+        <a target="_self"
+          class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+          href="#work-experience">Work Experience</a>
+        <a target="_self"
+          class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+          href="#projects">Featured Projects</a>
+      </div>
+      <div class="text-neutral-700 dark:text-neutral-400">
+        <p class="mb-2 mt-1 font-bold text-neutral-800 dark:text-white">Find Me</p>
+        <a target="_blank"
+          class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+          data-urlid="github">Github</a>
+        <a target="_blank"
+          class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+          data-urlid="fiverr">Fiverr</a>
+        <a target="_blank"
+          class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+          data-urlid="linkedin">LinkedIn</a>
+      </div>
+
+    </div>
+  </footer>
+
+    <script src="src/static/js/techtags.js"></script>
+    <script src="src/static/js/link-urls.js"></script>
+    <script src="src/static/js/render-section.js" defer></script>
+
+</body>
+
+</html>
