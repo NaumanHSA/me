@@ -2,18 +2,39 @@
 <html lang="en" class="dark" style="color-scheme: dark; --hidden: block;">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="preload" href="src/static/media/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*" type="font/woff2">
-    <link rel="stylesheet" href="src/static/css/937e0c2fea8d5dce.css" data-precedence="next">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600;700&display=swap"
-        rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="src/fonts/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*" type="font/woff2">
+    <link rel="stylesheet" href="src/styles/global.css" data-precedence="next">
+    <link rel="stylesheet" href="src/styles/fonts.css">
+  
     <title>Page not found . MNA Portfolio</title>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="description" content="Gen AI Engineer">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1">
+    <meta property="og:title" content="Nouman Ahsan - Portfolio">
+    <meta property="og:description" content="Gen AI Engineer">
+    <meta property="og:site_name" content="Nouman Ahsan - Portfolio">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Nouman Ahsan - Gen AI Engineer">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="src/media/favico.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+    <script>
+      const isProd = location.hostname.includes('github.io');
+      let base = isProd ? '/me/' : '/';
+      console.log("Host:", base, location.host)
+      document.write(`<base href="${base}">`);
+    </script>
 </head>
 
 <body class="antialiase relative scroll-smooth px-6 font-mono __variable_c1e5c9">
@@ -105,37 +126,36 @@
         <hr class="mx-auto mb-5 w-full border border-neutral-200 dark:border-neutral-800">
         <p class="mb-4 text-sm text-neutral-700 opacity-50 dark:text-neutral-300">Copyright © 2021 -
             <!-- -->2025<!-- -->
-            Nouman Ahsan
-        </p>
-        <div class="flex justify-between gap-4">
-            <div class="text-neutral-700 dark:text-neutral-400 text-white max-w-[40%]">
+            Nouman Ahsan</p>
+        <div class="flex justify-around gap-4 md:justify-between">
+            <div class="text-neutral-700 dark:text-neutral-400 text-white max-w-[40%] hidden md:block">
                 <h2 class="text-xl font-bold mb-0 text-white">Nouman Ahsan</h2>
                 <p>
                     To seamlessly connect innovation with implementation — delivering thoughtful, AI-driven technologies
                     that solve real-world problems.
                 </p>
             </div>
+
             <div class="text-neutral-700 dark:text-neutral-400">
                 <p class="mb-2 mt-1 uppercase font-bold text-neutral-800 dark:text-white">Navigation</p>
                 <a target="_self"
-                    class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
-                    href="#home" data-urlid="website">Home</a>
+                    class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+                    href="#home">Home</a>
                 <a target="_self"
-                    class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
-                    href="#work-experience" data-urlid="website">Work Experience</a>
+                    class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+                    href="#work-experience">Work Experience</a>
                 <a target="_self"
-                    class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
-                    href="#projects" data-urlid="website">Featured Projects</a>
+                    class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+                    href="#projects">Featured Projects</a>
             </div>
             <div class="text-neutral-700 dark:text-neutral-400">
-                <p class="mb-2 mt-1 font-bold text-neutral-800 dark:text-white">Social</p>
+                <p class="mb-2 mt-1 font-bold text-neutral-800 dark:text-white">Find Me</p>
                 <a target="_blank"
                     class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
                     data-urlid="github">Github</a>
-
                 <a target="_blank"
                     class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
-                    data-urlid="instagram">Instagram</a>
+                    data-urlid="fiverr">Fiverr</a>
                 <a target="_blank"
                     class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
                     data-urlid="linkedin">LinkedIn</a>

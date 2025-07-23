@@ -36,11 +36,6 @@
                     font-display: swap;
                     font-weight: 100 900;
                 }
-    
-                .__className_c1e5c9 {
-                    font-family: GeistMono, ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
-                }
-    
                 .__variable_c1e5c9 {
                     --font-geist-mono: "GeistMono", ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
                 }
@@ -54,9 +49,6 @@
             );
         });
     </script>
-
-
-
     <title>🚀 CodeMind: AI-Powered Code Intelligence Platform</title>
     <meta charset="UTF-8">
     <link rel="manifest" href="manifest.webmanifest">
@@ -127,191 +119,109 @@
 
     <!-- Main Content -->
     <main class="mx-auto min-h-screen w-full max-w-screen-lg llm-section">
-        <div class="mt-8 mb-12">
-            <h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
-                style="opacity: 1; transform: none;">🚀 CodeMind: AI-Powered Code Intelligence Platform</h1>
-        </div>
-        <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a full-stack
-            platform designed to revolutionize the way developers interact with their code. By combining deep learning,
-            natural language processing, and seamless user experience, CodeMind transforms codebases into interactive,
-            explorable knowledge systems. Whether you're exploring a legacy repository or onboarding a new project,
-            CodeMind provides instant, intelligent insights—powered by cutting-edge large language models.</p>
+        <div class="mt-8 mb-12"><h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight" style="opacity: 1; transform: none;">🚀 CodeMind: AI-Powered Code Intelligence Platform</h1></div><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a full-stack platform designed to revolutionize the way developers interact with their code. By combining deep learning, natural language processing, and seamless user experience, CodeMind transforms codebases into interactive, explorable knowledge systems. Whether you're exploring a legacy repository or onboarding a new project, CodeMind provides instant, intelligent insights—powered by cutting-edge large language models.</p>
 
-        <section
-            class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
-            id="what-is-codemind">
-            <h2 class="text-[1.7rem] font-[750] mb-4">🧠 What is CodeMind?</h2>
-            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a smart code
-                exploration and analysis system that brings <strong>LLM-assisted understanding</strong>,
-                <strong>semantic search</strong>, and <strong>interactive Q&amp;A</strong> to your programming projects.
-                It consists of:</p>
-            <ul class="list-disc pl-12 space-y-0">
-                <li>⚙️ A <strong>FastAPI backend</strong> with agentic workflow architecture powered by
-                    <strong>ReactAgent</strong>, capable of intelligent multi-step reasoning and tool chaining.</li>
-                <li>💻 A <strong>Streamlit frontend</strong> that provides a beautiful, user-friendly dashboard to query
-                    and visualize your code with the help of AI.</li>
-            </ul>
-            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Together, they create a <strong>developer
-                    assistant</strong> that feels like pair programming with a genius collaborator.</p>
+<section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="what-is-codemind"><h2 class="text-[1.7rem] font-[750] mb-4">🧠 What is CodeMind?</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a smart code exploration and analysis system that brings <strong>LLM-assisted understanding</strong>, <strong>semantic search</strong>, and <strong>interactive Q&amp;A</strong> to your programming projects. It consists of:</p>
+<ul class="list-disc pl-12 space-y-0">
+<li>⚙️ A <strong>FastAPI backend</strong> with agentic workflow architecture powered by <strong>ReactAgent</strong>, capable of intelligent multi-step reasoning and tool chaining.</li>
+<li>💻 A <strong>Streamlit frontend</strong> that provides a beautiful, user-friendly dashboard to query and visualize your code with the help of AI.</li>
+</ul>
+<p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Together, they create a <strong>developer assistant</strong> that feels like pair programming with a genius collaborator.</p>
 
-        </section>
-        <section
-            class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
-            id="key-capabilities">
-            <h2 class="text-[1.7rem] font-[750] mb-4">✨ Key Capabilities</h2>
-            <h3 class="font-bold mt-6">🧠 Agentic Workflows with ReactAgent</h3>
-            <ul class="list-disc pl-12 space-y-0">
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Dynamic Tool
-                            Selection</strong><br />
-                        CodeMind leverages <strong>ReactAgent</strong> to intelligently break down complex tasks into
-                        smaller, manageable steps. It dynamically selects and sequences the most relevant tools to
-                        complete multi-part instructions effectively.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Step-by-Step
-                            Reasoning</strong><br />
-                        The agent performs structured, chain-of-thought reasoning—executing tools one by one, analyzing
-                        intermediate results, and adjusting its approach as needed until the desired output is produced.
-                    </p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Custom Tool
-                            Registration</strong><br />
-                        The system supports easy registration of custom tools, such as documentation extractors, diagram
-                        generators, or test writers. This modularity allows teams to tailor CodeMind to their specific
-                        workflows.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Extensible and
-                            Domain-Agnostic</strong><br />
-                        While built for code understanding, the agent is fully extensible and adaptable to entirely
-                        different domains. Its capabilities depend solely on the registered tools, making it a versatile
-                        orchestration layer for any LLM-powered workflow.</p>
-                </li>
-            </ul>
+</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="key-capabilities"><h2 class="text-[1.7rem] font-[750] mb-4">✨ Key Capabilities</h2><h3 class="font-bold mt-6">🧠 Agentic Workflows with ReactAgent</h3>
+<ul class="list-disc pl-12 space-y-0">
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Dynamic Tool Selection</strong><br/>
+CodeMind leverages <strong>ReactAgent</strong> to intelligently break down complex tasks into smaller, manageable steps. It dynamically selects and sequences the most relevant tools to complete multi-part instructions effectively.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Step-by-Step Reasoning</strong><br/>
+The agent performs structured, chain-of-thought reasoning—executing tools one by one, analyzing intermediate results, and adjusting its approach as needed until the desired output is produced.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Custom Tool Registration</strong><br/>
+The system supports easy registration of custom tools, such as documentation extractors, diagram generators, or test writers. This modularity allows teams to tailor CodeMind to their specific workflows.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Extensible and Domain-Agnostic</strong><br/>
+While built for code understanding, the agent is fully extensible and adaptable to entirely different domains. Its capabilities depend solely on the registered tools, making it a versatile orchestration layer for any LLM-powered workflow.</p>
+</li>
+</ul>
 
-            <h3 class="font-bold mt-6">🤖 Deep Integration with Language Models</h3>
-            <ul class="list-disc pl-12 space-y-0">
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Supported LLM
-                            Backends</strong> (configurable):</p>
-                    <ul class="list-disc pl-12 space-y-0">
-                        <li><code class="inline-code">OpenAI Chat API</code></li>
-                        <li><code class="inline-code">vLLM</code></li>
-                        <li><code class="inline-code">llamacpp</code></li>
-                        <li><code class="inline-code">Transformers</code></li>
-                        <li><code class="inline-code">Unsloth API</code></li>
-                    </ul>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Asynchronous and
-                            Configurable</strong><br />
-                        High-performance, non-blocking processing with easy backend switching based on project or
-                        deployment needs.</p>
-                </li>
-            </ul>
+<h3 class="font-bold mt-6">🤖 Deep Integration with Language Models</h3>
+<ul class="list-disc pl-12 space-y-0">
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Supported LLM Backends</strong> (configurable):</p>
+<ul class="list-disc pl-12 space-y-0">
+<li><code class="inline-code">OpenAI Chat API</code></li>
+<li><code class="inline-code">vLLM</code></li>
+<li><code class="inline-code">llamacpp</code></li>
+<li><code class="inline-code">Transformers</code></li>
+<li><code class="inline-code">Unsloth API</code></li>
+</ul>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Asynchronous and Configurable</strong><br/>
+High-performance, non-blocking processing with easy backend switching based on project or deployment needs.</p>
+</li>
+</ul>
 
-            <h3 class="font-bold mt-6">🔍 Intelligent Code Understanding</h3>
-            <ul class="list-disc pl-12 space-y-0">
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Smart Code
-                            Chunking</strong><br />
-                        Automatically segments large codebases into meaningful units for better context and processing.
-                    </p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Semantic Vector
-                            Embeddings</strong><br />
-                        Transforms code into vector representations to power fast and accurate semantic search across
-                        entire repositories.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Multi-Language
-                            Support</strong><br />
-                        Works with a wide range of programming languages and file formats including Python, JavaScript,
-                        Markdown, config files, and more.</p>
-                </li>
-            </ul>
+<h3 class="font-bold mt-6">🔍 Intelligent Code Understanding</h3>
+<ul class="list-disc pl-12 space-y-0">
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Smart Code Chunking</strong><br/>
+Automatically segments large codebases into meaningful units for better context and processing.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Semantic Vector Embeddings</strong><br/>
+Transforms code into vector representations to power fast and accurate semantic search across entire repositories.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Multi-Language Support</strong><br/>
+Works with a wide range of programming languages and file formats including Python, JavaScript, Markdown, config files, and more.</p>
+</li>
+</ul>
 
-            <h3 class="font-bold mt-6">📁 Code Repository Operations</h3>
-            <ul class="list-disc pl-12 space-y-0">
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Drag-and-Drop
-                            Uploads</strong><br />
-                        Upload code files directly through the browser—no setup required.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>GitHub Repository
-                            Cloning</strong><br />
-                        Just paste a GitHub URL and let CodeMind automatically clone, index, and prepare the project for
-                        AI exploration.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Support for Complex File
-                            Structures</strong><br />
-                        Handles source code, documentation, and config files intelligently.</p>
-                </li>
-            </ul>
+<h3 class="font-bold mt-6">📁 Code Repository Operations</h3>
+<ul class="list-disc pl-12 space-y-0">
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Drag-and-Drop Uploads</strong><br/>
+Upload code files directly through the browser—no setup required.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>GitHub Repository Cloning</strong><br/>
+Just paste a GitHub URL and let CodeMind automatically clone, index, and prepare the project for AI exploration.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Support for Complex File Structures</strong><br/>
+Handles source code, documentation, and config files intelligently.</p>
+</li>
+</ul>
 
-            <h3 class="font-bold mt-6">🧑‍💻 Personalized User Experience</h3>
-            <ul class="list-disc pl-12 space-y-0">
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Secure Authentication
-                            System</strong><br />
-                        Private user sessions and chat history persistence.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Session-Based
-                            Workspace</strong><br />
-                        Organized interactions for each project—return anytime to continue.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Conversation
-                            Memory</strong><br />
-                        Keep context across multiple queries and sessions.</p>
-                </li>
-            </ul>
+<h3 class="font-bold mt-6">🧑‍💻 Personalized User Experience</h3>
+<ul class="list-disc pl-12 space-y-0">
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Secure Authentication System</strong><br/>
+Private user sessions and chat history persistence.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Session-Based Workspace</strong><br/>
+Organized interactions for each project—return anytime to continue.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Conversation Memory</strong><br/>
+Keep context across multiple queries and sessions.</p>
+</li>
+</ul>
 
-            <h3 class="font-bold mt-6">📊 Interactive Streamlit Dashboard</h3>
-            <ul class="list-disc pl-12 space-y-0">
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Responsive UI with Real-Time
-                            Feedback</strong><br />
-                        Ask questions and explore results side by side.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Customizable
-                            Layouts</strong><br />
-                        Switch between light or focused views for exploration.</p>
-                </li>
-                <li>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Progressive Loading &amp;
-                            Background Tasks</strong><br />
-                        Seamlessly handles large repositories and background jobs.</p>
-                </li>
-            </ul>
+<h3 class="font-bold mt-6">📊 Interactive Streamlit Dashboard</h3>
+<ul class="list-disc pl-12 space-y-0">
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Responsive UI with Real-Time Feedback</strong><br/>
+Ask questions and explore results side by side.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Customizable Layouts</strong><br/>
+Switch between light or focused views for exploration.</p>
+</li>
+<li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Progressive Loading &amp; Background Tasks</strong><br/>
+Seamlessly handles large repositories and background jobs.</p>
+</li>
+</ul>
 
-        </section>
-        <section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
-            id="use-cases">
-            <h2 class="text-[1.7rem] font-[750] mb-4">💡 Use Cases</h2>
-            <ul class="list-disc pl-12 space-y-0">
-                <li><strong>Developer Onboarding</strong></li>
-                <li><strong>Legacy Codebase Exploration</strong></li>
-                <li><strong>Automated Documentation Generation</strong></li>
-                <li><strong>Semantic Code Search</strong></li>
-                <li><strong>Interactive Architecture Diagrams</strong></li>
-            </ul>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="use-cases"><h2 class="text-[1.7rem] font-[750] mb-4">💡 Use Cases</h2><ul class="list-disc pl-12 space-y-0">
+<li><strong>Developer Onboarding</strong></li>
+<li><strong>Legacy Codebase Exploration</strong></li>
+<li><strong>Automated Documentation Generation</strong></li>
+<li><strong>Semantic Code Search</strong></li>
+<li><strong>Interactive Architecture Diagrams</strong></li>
+</ul>
 
-        </section>
-        <section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
-            id="why-codemind">
-            <h2 class="text-[1.7rem] font-[750] mb-4">🌟 Why CodeMind?</h2>
-            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">CodeMind isn’t just a code viewer. It’s a
-                smart, extensible, AI-native platform that helps you <strong>understand</strong>,
-                <strong>document</strong>, and <strong>work with</strong> your code—not just look at it.</p>
-        </section>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="why-codemind"><h2 class="text-[1.7rem] font-[750] mb-4">🌟 Why CodeMind?</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">CodeMind isn’t just a code viewer. It’s a smart, extensible, AI-native platform that helps you <strong>understand</strong>, <strong>document</strong>, and <strong>work with</strong> your code—not just look at it.</p>
+</section>
     </main>
 
     <!-- Footer -->
@@ -322,8 +232,7 @@
         <hr class="mx-auto mb-5 w-full border border-neutral-200 dark:border-neutral-800">
         <p class="mb-4 text-sm text-neutral-700 opacity-50 dark:text-neutral-300">Copyright © 2021 -
             <!-- -->2025<!-- -->
-            Nouman Ahsan
-        </p>
+            Nouman Ahsan</p>
         <div class="flex justify-around gap-4 md:justify-between">
             <div class="text-neutral-700 dark:text-neutral-400 text-white max-w-[40%] hidden md:block">
                 <h2 class="text-xl font-bold mb-0 text-white">Nouman Ahsan</h2>
@@ -357,11 +266,8 @@
                     class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
                     data-urlid="linkedin">LinkedIn</a>
             </div>
-
         </div>
     </footer>
-    <!-- <script src="../../src/scripts/link-urls.js"></script>
-    <script src="../../src/scripts/render-section.js" defer></script> -->
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";
