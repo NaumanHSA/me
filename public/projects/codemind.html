@@ -3,10 +3,9 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="preload" href="src/static/media/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*"
-        type="font/woff2">
+    <link rel="preload" href="src/fonts/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*" type="font/woff2">
     <!-- <link rel="stylesheet" href="src/static/css/937e0c2fea8d5dce.css" data-precedence="next"> -->
-    <link rel="stylesheet" href="src/static/css/937e0c2fea8d5dce.css" data-precedence="next">
+    <link rel="stylesheet" href="src/styles/global.css" data-precedence="next">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,18 +29,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
-    <base id="base-tag" href="">
     <script>
-        (function () {
-            const isProd = location.hostname === "naumanhsa.github.io";
-            const base = document.getElementById("base-tag");
-            if (isProd) {
-                base.setAttribute("href", "/me/");
-            } else {
+        const isProd = location.hostname.includes('github.io');
+        let base = isProd ? '/me/' : '/';
 
-                base.setAttribute("href", "/");
-            }
-        })();
+        console.log("--------", base)
+
+        // document.write(`<base href="${base}projects/codemind.html">`);
+        document.write(`<base href="${base}">`);
     </script>
 </head>
 
@@ -279,7 +274,8 @@
         <hr class="mx-auto mb-5 w-full border border-neutral-200 dark:border-neutral-800">
         <p class="mb-4 text-sm text-neutral-700 opacity-50 dark:text-neutral-300">Copyright © 2021 -
             <!-- -->2025<!-- -->
-            Nouman Ahsan</p>
+            Nouman Ahsan
+        </p>
         <div class="flex justify-around gap-4 md:justify-between">
             <div class="text-neutral-700 dark:text-neutral-400 text-white max-w-[40%] hidden md:block">
                 <h2 class="text-xl font-bold mb-0 text-white">Nouman Ahsan</h2>
@@ -317,9 +313,12 @@
         </div>
     </footer>
 
-    <script src="src/static/js/techtags.js"></script>
-    <script src="src/static/js/link-urls.js"></script>
-    <script src="src/static/js/render-section.js" defer></script>
+    <!-- <script type="module" src="/src/main.js"></script> -->
+
+    <script src="src/scripts/techtags.js"></script>
+    <script src="src/scripts/link-urls.js"></script>
+    <script src="src/scripts/render-section.js" defer></script>
+
 
 </body>
 

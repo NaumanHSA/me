@@ -5,7 +5,7 @@ const projectsData = [ // Slide 1
         datetime: "2022-02-24",
         overview: `A full-stack system combining a FastAPI backend and Streamlit frontend to help developers analyze, explore, and understand codebases using LLMs. Features agentic workflows powered by ReactAgent, semantic vector search, and multi-model backend support including OpenAI, vLLM, llama.cpp, Transformers, and more..`,
         techTags: ["python", "fastapi", "openai", "vllm", "llama", "huggingface"],
-        moreLink: "src/projects/codemind.html"
+        moreLink: "public/projects/codemind.html"
     },
     {
         title: "OCR Data Toolkit",
@@ -13,7 +13,7 @@ const projectsData = [ // Slide 1
         datetime: "2021-01-10",
         overview: `A powerful Python toolkit for generating high-quality synthetic datasets for Optical Character Recognition (OCR) model training and evaluation. It enables generating realistic text images with configurable backgrounds, fonts, augmentations, and corresponding ground-truth labels—ideal for both academic research and production training pipelines.`,
         techTags: ["python", "tensorflow", "opencv"],
-        moreLink: "src/projects/ocr_data_toolkit.html"
+        moreLink: "public/projects/ocr_data_toolkit.html"
     },
     {
         title: "😎 Face Recognition - MERN Stack Application",
@@ -21,7 +21,7 @@ const projectsData = [ // Slide 1
         datetime: "2021-01-10",
         overview: `The Face Recognition MERN Stack Application is a full-stack web application that enables users to register, recognize, and manage identities through facial images. Designed to demonstrate the power of deep learning integrated with modern web technologies, it seamlessly connects a React front-end with a Node.js backend and MongoDB database.`,
         techTags: ["tensorflow", "opencv", "react", "nodejs"],
-        moreLink: "src/projects/MERN_stack_FR.html"
+        moreLink: "public/projects/MERN_stack_FR.html"
     },
     {
         title: "🎥 Face Stream Worker",
@@ -29,7 +29,7 @@ const projectsData = [ // Slide 1
         datetime: "2023-08-01",
         overview: `Face Stream Worker is a robust, production-ready backend system built with FastAPI for managing and processing real-time video streams from IP cameras capable of detecting and tracking faces. Designed with scalability and efficiency in mind, it provides asynchronous operations, multiprocessing for handling multiple video streams concurrently, and optional Redis integration for event broadcasting.`,
         techTags: ["python", "fastapi", "opencv", "pytorch"],
-        moreLink: "src/projects/face_stream_worker.html"
+        moreLink: "public/projects/face_stream_worker.html"
     },
     {
         title: "Document Capture SDK",
@@ -37,7 +37,7 @@ const projectsData = [ // Slide 1
         datetime: "2021-01-10",
         overview: `Document Capture SDK is a lightweight, high-performance JavaScript library built for capturing high-quality images of physical documents directly in the browser. The solution ensures documents are precisely detected, cropped, aligned, and classified in real time, enabling smooth digital onboarding and document analysis workflows.`,
         techTags: ["opencv", "tensorflow", "nodejs"],
-        moreLink: "src/projects/document_capture.html"
+        moreLink: "public/projects/document_capture.html"
     },
     {
         title: "📸 Live Face Capture",
@@ -45,7 +45,7 @@ const projectsData = [ // Slide 1
         datetime: "2022-02-24",
         overview: `Live Face Capture is a lightweight JavaScript library designed to reliably capture high-quality, front-facing facial images, optimized for scenarios where precise face alignment and authenticity are crucial. The library ensures that captured photos are properly aligned and feature real human faces by combining pose estimation with liveness detection.`,
         techTags: ["python", "opencv", "tensorflowjs"],
-        moreLink: "src/projects/live_face_capture.html"
+        moreLink: "public/projects/live_face_capture.html"
     },
     {
         title: "Real-Time Detection of a Suspicious Person",
@@ -53,7 +53,7 @@ const projectsData = [ // Slide 1
         datetime: "2021-01-10",
         overview: `Real-Time Detection of a Suspicious Person in CCTV Footage is a cutting-edge computer vision system designed to automatically detect potentially dangerous individuals in live CCTV streams. The system focuses on identifying persons holding weapons—a critical sign of potential threats—thus reducing reliance on human operators and enabling proactive security measures in real-time.`,
         techTags: ["python", "tensorflow", "opencv"],
-        moreLink: "src/projects/SPD.html"
+        moreLink: "public/projects/SPD.html"
     },
     {
         title: "🔐 Enigma — Enigma Machine Simulator",
@@ -61,7 +61,7 @@ const projectsData = [ // Slide 1
         datetime: "2020-03-05",
         overview: `Enigma is a Python package and CLI tool that simulates the iconic World War II Enigma machine. With customizable settings for rotors, ring positions, reflectors, and plugboard wiring, Enigma offers an authentic simulation experience for cryptography enthusiasts, educators, and developers.`,
         techTags: ["python"],
-        moreLink: "src/projects/enigma.html"
+        moreLink: "public/projects/enigma.html"
     },
     {
         title: "🚦Road Traffic Monitoring System using YOLOv5",
@@ -69,7 +69,7 @@ const projectsData = [ // Slide 1
         datetime: "2021-01-10",
         overview: `The Real-Time Road Traffic Monitoring System is an advanced computer vision platform designed to analyze live road traffic footage with remarkable precision and speed. It integrates deep learning models to detect, classify, and track vehicles while extracting rich details like vehicle brand and color in real time.`,
         techTags: ["python", "tensorflow", "opencv"],
-        moreLink: "src/projects/traffic_monitoring.html"
+        moreLink: "public/projects/traffic_monitoring.html"
     }
 ];
 
