@@ -29,16 +29,10 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
   <script>
-    (function () {
-      const isProd = location.hostname === "naumanhsa.github.io";
-      const base = document.getElementById("base-tag");
-      if (isProd) {
-        base.setAttribute("href", "/me/");
-      } else {
-
-        base.setAttribute("href", "/");
-      }
-    })();
+    const isProd = location.hostname.includes('github.io');
+    let base = isProd ? '/me/' : '/';
+    console.log("Host:", base, location.host)
+    document.write(`<base href="${base}">`);
   </script>
 </head>
 
