@@ -3,12 +3,31 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="preload" href="../../src/fonts/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*" type="font/woff2">
-    <!-- <link rel="stylesheet" href="src/static/css/937e0c2fea8d5dce.css" data-precedence="next"> -->
-    <link rel="stylesheet" href="../../src/styles/global.css" data-precedence="next">
+    <!-- <link rel="preload" href="../../src/fonts/66f30814ff6d7cdf.p.woff2" as="font" crossorigin="*" type="font/woff2">
+    <link rel="stylesheet" href="../../src/styles/global.css" data-precedence="next"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const isProd = location.hostname === "naumanhsa.github.io";
+            // Load CSS
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = (isProd ? "/me" : "") + "/src/styles/global.css";
+            link.setAttribute("data-precedence", "next");
+            document.head.appendChild(link);
+    
+            // Preload Font
+            const preloadFont = document.createElement("link");
+            preloadFont.rel = "preload";
+            preloadFont.href = (isProd ? "/me" : "") + "/src/fonts/66f30814ff6d7cdf.p.woff2";
+            preloadFont.as = "font";
+            preloadFont.type = "font/woff2";
+            preloadFont.crossOrigin = "*";
+            document.head.appendChild(preloadFont);
+        });
+    </script>
 
     <title>🚀 CodeMind: AI-Powered Code Intelligence Platform</title>
     <meta charset="UTF-8">
@@ -129,8 +148,23 @@
 
         </div>
     </footer>
-    <script src="../../src/scripts/link-urls.js"></script>
-    <script src="../../src/scripts/render-section.js" defer></script>
+    <!-- <script src="../../src/scripts/link-urls.js"></script>
+    <script src="../../src/scripts/render-section.js" defer></script> -->
+    <script>
+        (function () {
+            const isProd = location.hostname === "naumanhsa.github.io";
+            const scripts_to_add = [
+                "/src/scripts/link-urls.js",
+                "/src/scripts/render-section.js",
+            ]
+            scripts_to_add.forEach(element => {
+                const script = document.createElement("script");
+                script.src = (isProd ? "/me" : "") + element;
+                script.defer = true; // optional, ensures it executes after parsing
+                document.body.appendChild(script);
+            });
+        })();
+    </script>
 </body>
 
 </html>
