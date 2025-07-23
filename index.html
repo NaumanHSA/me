@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preload" href="/me/assets/66f30814ff6d7cdf.p-bOGSM49p.woff2" as="font" crossorigin="*" type="font/woff2">
+  <link rel="preload" href="/me/assets/66f30814ff6d7cdf.p-bOGSM49p.woff2" as="font" crossorigin="*" type="font/woff2">
 
   <title>Nouman Ahsan - Gen AI Engineer</title>
   <meta charset="UTF-8">
@@ -29,8 +29,9 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
   <script>
     const isProd = location.hostname.includes('github.io');
-    const base = isProd ? '/me/' : '/';
-    document.write(`<base href="${base}projects/ocr_data_toolkit.html">`);
+    let base = isProd ? '/me/' : '/';
+    console.log("Host:", base, location.host)
+    document.write(`<base href="${base}">`);
   </script>
   <script type="module" crossorigin src="/me/assets/index-DWujs1fP.js"></script>
   <link rel="stylesheet" crossorigin href="/me/assets/index-0RjD9At9.css">
@@ -543,7 +544,7 @@
   <script src="src/static/js/link-urls.js"></script>
   <script src="src/static/js/contact.js"></script>
   <script src="src/static/js/start.js"></script>
-  <script src="src/static/js/render-text.js" defer></script> -->
+  <script src="src/static/js/render-text.js" defer></script> -->
 
   <script>
     const mySwiper = new Swiper(".mySwiper", {
