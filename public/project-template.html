@@ -68,19 +68,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
-    <base id="base-tag" href="">
-    <script>
-        (function () {
-            const isProd = location.hostname === "naumanhsa.github.io";
-            const base = document.getElementById("base-tag");
-            if (isProd) {
-                base.setAttribute("href", "/me/");
-            } else {
-
-                base.setAttribute("href", "/");
-            }
-        })();
-    </script>
 </head>
 
 <body class="antialiase relative scroll-smooth px-6 font-mono __variable_c1e5c9">
@@ -125,12 +112,12 @@
     <!-- Footer -->
     <div class="noise pointer-events-none absolute inset-0"></div>
     <div class="color-rays"></div>
-
     <footer class="mx-auto w-full max-w-screen-md pb-12">
         <hr class="mx-auto mb-5 w-full border border-neutral-200 dark:border-neutral-800">
         <p class="mb-4 text-sm text-neutral-700 opacity-50 dark:text-neutral-300">Copyright © 2021 -
             <!-- -->2025<!-- -->
-            Nouman Ahsan</p>
+            Nouman Ahsan
+        </p>
         <div class="flex justify-around gap-4 md:justify-between">
             <div class="text-neutral-700 dark:text-neutral-400 text-white max-w-[40%] hidden md:block">
                 <h2 class="text-xl font-bold mb-0 text-white">Nouman Ahsan</h2>
@@ -166,6 +153,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";

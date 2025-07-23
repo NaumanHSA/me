@@ -68,19 +68,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
-    <base id="base-tag" href="">
-    <script>
-        (function () {
-            const isProd = location.hostname === "naumanhsa.github.io";
-            const base = document.getElementById("base-tag");
-            if (isProd) {
-                base.setAttribute("href", "/me/");
-            } else {
-
-                base.setAttribute("href", "/");
-            }
-        })();
-    </script>
 </head>
 
 <body class="antialiase relative scroll-smooth px-6 font-mono __variable_c1e5c9">
@@ -125,7 +112,7 @@
 </a></p>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">A powerful Python toolkit for generating high-quality <strong>synthetic datasets</strong> for Optical Character Recognition (OCR) model training and evaluation. It enables generating realistic text images with configurable backgrounds, fonts, augmentations, and corresponding ground-truth labels—ideal for both academic research and production training pipelines.</p>
 
-<section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="overview"><h2 class="text-[1.7rem] font-[750] mb-4">📦 Overview</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The <strong>OCR Data Toolkit</strong> (<code class="inline-code">ocr_data_toolkit</code>) helps simulate a wide range of real-world OCR scenarios. Its features are tailored for robustness, scalability, and flexibility in synthetic data generation.</p>
+<section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="overview"><h2 class="text-[1.7rem] font-[750] mb-4">📦 Overview</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The <strong>OCR Data Toolkit</strong> (<code class="inline-code">ocr_data_toolkit</code>) helps simulate a wide range of real-world OCR scenarios. Its features are tailored for robustness, scalability, and flexibility in synthetic data generation.</p>
 <ul class="list-disc pl-12 space-y-0">
 <li>🎯 <strong>Flexible text generation</strong> (words, numbers, dates)</li>
 <li>🖋️ <strong>Custom fonts and backgrounds</strong></li>
@@ -136,7 +123,7 @@
 </ul>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Synthetic datasets allow developers to boost OCR performance, especially when real annotated data is hard to obtain.</p>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="features"><h2 class="text-[1.7rem] font-[750] mb-4">🚀 Features</h2><h3 class="font-bold mt-6">📝 Text Generation</h3>
+</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="features"><h2 class="text-[1.7rem] font-[750] mb-4">🚀 Features</h2><h3 class="font-bold mt-6">📝 Text Generation</h3>
 <ul class="list-disc pl-12 space-y-0">
 <li>Randomized text including words, numbers, and dates</li>
 <li>Customizable generation probabilities</li>
@@ -170,7 +157,7 @@
 <li>Entire toolkit controlled using Python config dataclasses or dictionaries</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="configuration"><h2 class="text-[1.7rem] font-[750] mb-4">🛠️ Configuration</h2><h3 class="font-bold mt-6">Input Config (<code class="inline-code">Config</code> class)</h3>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="configuration"><h2 class="text-[1.7rem] font-[750] mb-4">🛠️ Configuration</h2><h3 class="font-bold mt-6">Input Config (<code class="inline-code">Config</code> class)</h3>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">All generation parameters are defined using a dataclass. Highlights include:</p>
 <table>
 <thead>
@@ -235,7 +222,7 @@
 </table>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Defaults ensure immediate usability without needing extensive setup.</p>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="augmentation-options-code-augmentationconfig-code"><h2 class="text-[1.7rem] font-[750] mb-4">🧪 Augmentation Options (<code class="inline-code">AugmentationConfig</code>)</h2><table>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="augmentation-options-code-augmentationconfig-code"><h2 class="text-[1.7rem] font-[750] mb-4">🧪 Augmentation Options (<code class="inline-code">AugmentationConfig</code>)</h2><table>
 <thead>
 <tr>
 <th>Parameter</th>
@@ -338,18 +325,18 @@
 </tbody>
 </table>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="output-image-amp-padding-strategy"><h2 class="text-[1.7rem] font-[750] mb-4">🖼️ Output Image &amp; Padding Strategy</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">If <code class="inline-code">output_image_size</code> is specified, each image is resized and padded to match the target size, preserving aspect ratio. Padding is added to bottom/right with black pixels—ensuring uniform image sizes.</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="output-image-amp-padding-strategy"><h2 class="text-[1.7rem] font-[750] mb-4">🖼️ Output Image &amp; Padding Strategy</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">If <code class="inline-code">output_image_size</code> is specified, each image is resized and padded to match the target size, preserving aspect ratio. Padding is added to bottom/right with black pixels—ensuring uniform image sizes.</p>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="output-structure"><h2 class="text-[1.7rem] font-[750] mb-4">📁 Output Structure</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">When using <code class="inline-code">generate_training_data</code>, the toolkit produces:</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="output-structure"><h2 class="text-[1.7rem] font-[750] mb-4">📁 Output Structure</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">When using <code class="inline-code">generate_training_data</code>, the toolkit produces:</p>
 <ul class="list-disc pl-12 space-y-0">
 <li><code class="inline-code">images/</code>: Folder with all generated <code class="inline-code">.png</code> images</li>
 <li><code class="inline-code">gt.txt</code>: Ground truth text file (<code class="inline-code">filename -&gt; text mapping</code>)</li>
 </ul>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">This standard output format is compatible with many OCR training pipelines.</p>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="extensible-design"><h2 class="text-[1.7rem] font-[750] mb-4">🧩 Extensible Design</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The codebase is modular and extensible, making it easy to integrate new fonts, languages, background styles, or augmentations.</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="extensible-design"><h2 class="text-[1.7rem] font-[750] mb-4">🧩 Extensible Design</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The codebase is modular and extensible, making it easy to integrate new fonts, languages, background styles, or augmentations.</p>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="ideal-for"><h2 class="text-[1.7rem] font-[750] mb-4">🔧 Ideal For</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="ideal-for"><h2 class="text-[1.7rem] font-[750] mb-4">🔧 Ideal For</h2><ul class="list-disc pl-12 space-y-0">
 <li>Training OCR models with diverse data</li>
 <li>Benchmarks and robustness testing</li>
 <li>Low-resource language OCR experiments</li>
@@ -363,12 +350,12 @@
     <!-- Footer -->
     <div class="noise pointer-events-none absolute inset-0"></div>
     <div class="color-rays"></div>
-
     <footer class="mx-auto w-full max-w-screen-md pb-12">
         <hr class="mx-auto mb-5 w-full border border-neutral-200 dark:border-neutral-800">
         <p class="mb-4 text-sm text-neutral-700 opacity-50 dark:text-neutral-300">Copyright © 2021 -
             <!-- -->2025<!-- -->
-            Nouman Ahsan</p>
+            Nouman Ahsan
+        </p>
         <div class="flex justify-around gap-4 md:justify-between">
             <div class="text-neutral-700 dark:text-neutral-400 text-white max-w-[40%] hidden md:block">
                 <h2 class="text-xl font-bold mb-0 text-white">Nouman Ahsan</h2>
@@ -404,6 +391,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";
