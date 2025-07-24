@@ -35,8 +35,11 @@ build/
 *.pyc
 __pycache__/
 
-# Markdown files
-*.md
+# Ignore all .md files recursively
+**/*.md
+
+# But do NOT ignore .md files in the root directory
+!/*.md
 
 # Windows Zone Identifier metadata
 *.Zone.Identifier
