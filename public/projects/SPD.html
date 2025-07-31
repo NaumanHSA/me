@@ -109,7 +109,7 @@
         <div class="mt-8 mb-12"><h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight" style="opacity: 1; transform: none;">🛡️ Real-Time Detection of a Suspicious Person in CCTV Footage</h1></div><a href="https://github.com/NaumanHSA/Suspicious-Person-Detection-in-CCTV-Footage.git" target="_blank">
 <img alt="GitHub Repo" class="rounded mb-6" src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white"/>
 </a>
-<section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="project-overview"><h2 class="text-[1.7rem] font-[750] mb-4">🌟 Project Overview</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Real-Time Detection of a Suspicious Person in CCTV Footage</strong> is a cutting-edge computer vision system designed to automatically detect potentially dangerous individuals in live CCTV streams. The system focuses on identifying persons holding weapons—a critical sign of potential threats—thus reducing reliance on human operators and enabling proactive security measures in real-time.</p>
+<section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="project-overview"><h2 class="text-[1.7rem] font-[750] mb-4">🌟 Project Overview</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Real-Time Detection of a Suspicious Person in CCTV Footage</strong> is a cutting-edge computer vision system designed to automatically detect potentially dangerous individuals in live CCTV streams. The system focuses on identifying persons holding weapons—a critical sign of potential threats—thus reducing reliance on human operators and enabling proactive security measures in real-time.</p>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The project addresses key challenges in traditional CCTV surveillance, including:</p>
 <ul class="list-disc pl-12 space-y-0">
 <li>High false alarm rates in existing automated systems.</li>
@@ -118,12 +118,12 @@
 </ul>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">This work was conducted as a research project at the Department of Computer Science, Air University, Islamabad.</p>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="problem-definition"><h2 class="text-[1.7rem] font-[750] mb-4">🎯 Problem Definition</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="problem-definition"><h2 class="text-[1.7rem] font-[750] mb-4">🎯 Problem Definition</h2><ul class="list-disc pl-12 space-y-0">
 <li><strong>Suspicious Person Definition:</strong> For this project, a suspicious person is defined as any person detected holding a visible weapon.</li>
 <li><strong>Scenario:</strong> Indoor/outdoor CCTV footage at entrances, exits, corridors, or public spaces.</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="architecture-and-workflow-of-the-suspicious-person-detector-spd"><h2 class="text-[1.7rem] font-[750] mb-4">🧩 Architecture and Workflow of the Suspicious Person Detector (SPD)</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The <strong>Suspicious Person Detector (SPD)</strong> is designed as a carefully structured pipeline that balances <strong>accuracy</strong>, <strong>speed</strong>, and <strong>low false alarms</strong> in detecting threats from CCTV streams. The end-to-end workflow can be understood by analyzing the following diagrams, each representing critical stages of the system.</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="architecture-and-workflow-of-the-suspicious-person-detector-spd"><h2 class="text-[1.7rem] font-[750] mb-4">🧩 Architecture and Workflow of the Suspicious Person Detector (SPD)</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The <strong>Suspicious Person Detector (SPD)</strong> is designed as a carefully structured pipeline that balances <strong>accuracy</strong>, <strong>speed</strong>, and <strong>low false alarms</strong> in detecting threats from CCTV streams. The end-to-end workflow can be understood by analyzing the following diagrams, each representing critical stages of the system.</p>
 <h3 class="font-bold mt-6">1. <strong>Overall System Architecture</strong></h3>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The SPD system is built around three interconnected modules:</p>
 <ul class="list-disc pl-12 space-y-0">
@@ -209,7 +209,7 @@
 <em>Figure 3: Classifier Design — Detecting a Suspicious Person from YOLOv3 Predictions</em>
 </div>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="end-to-end-workflow-summary"><h2 class="text-[1.7rem] font-[750] mb-4">🚦 End-to-End Workflow Summary</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Here’s how the entire system works together in real time:</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="end-to-end-workflow-summary"><h2 class="text-[1.7rem] font-[750] mb-4">🚦 End-to-End Workflow Summary</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Here’s how the entire system works together in real time:</p>
 <ol>
 <li>CCTV stream is captured and divided into frames.</li>
 <li>Each frame optionally passes through motion detection.</li>
@@ -234,7 +234,7 @@
 <li>Reliable detection of threats in live CCTV feeds.</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="key-technical-highlights"><h2 class="text-[1.7rem] font-[750] mb-4">🚀 Key Technical Highlights</h2><h3 class="font-bold mt-6">🧠 Object Detection with YOLOv3</h3>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="key-technical-highlights"><h2 class="text-[1.7rem] font-[750] mb-4">🚀 Key Technical Highlights</h2><h3 class="font-bold mt-6">🧠 Object Detection with YOLOv3</h3>
 <ul class="list-disc pl-12 space-y-0">
 <li>Chosen for:<ul class="list-disc pl-12 space-y-0">
 <li>Real-time speed (~30 FPS on high-end GPUs).</li>
@@ -345,7 +345,7 @@
 <li>Helps maintain real-time performance.</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="experimental-results"><h2 class="text-[1.7rem] font-[750] mb-4">🎯 Experimental Results</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="experimental-results"><h2 class="text-[1.7rem] font-[750] mb-4">🎯 Experimental Results</h2><ul class="list-disc pl-12 space-y-0">
 <li>Tested on <strong>60 scenes</strong>:<ul class="list-disc pl-12 space-y-0">
 <li>50 scenes with suspicious persons</li>
 <li>10 scenes without suspicious persons</li>
@@ -359,14 +359,14 @@
 <li>Resulting in an overall system accuracy of <strong>96%</strong> for real-time suspicious person detection.</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="innovations-amp-contributions"><h2 class="text-[1.7rem] font-[750] mb-4">🛠 Innovations &amp; Contributions</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="innovations-amp-contributions"><h2 class="text-[1.7rem] font-[750] mb-4">🛠 Innovations &amp; Contributions</h2><ul class="list-disc pl-12 space-y-0">
 <li>Introduced IoW and WoP metrics for robust weapon-person association.</li>
 <li>Developed a layered detection pipeline to reduce false alarms.</li>
 <li>Balanced speed and accuracy through input resolution tuning and motion pre-filtering.</li>
 <li>Achieved real-time performance even on mid-tier GPUs like the GTX 960M.</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="potential-applications"><h2 class="text-[1.7rem] font-[750] mb-4">🎯 Potential Applications</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="potential-applications"><h2 class="text-[1.7rem] font-[750] mb-4">🎯 Potential Applications</h2><ul class="list-disc pl-12 space-y-0">
 <li>Intelligent surveillance systems in:<ul class="list-disc pl-12 space-y-0">
 <li>Airports, train stations</li>
 <li>Shopping malls</li>
@@ -377,7 +377,7 @@
 <li>Real-time alerting for security teams and law enforcement.</li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="future-work"><h2 class="text-[1.7rem] font-[750] mb-4">🔭 Future Work</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="future-work"><h2 class="text-[1.7rem] font-[750] mb-4">🔭 Future Work</h2><ul class="list-disc pl-12 space-y-0">
 <li>Incorporate <strong>mask recognition</strong> to further improve suspicious person classification.</li>
 <li>Extend weapon classes to include knives, daggers, and other objects.</li>
 <li>Analyze <strong>weapon motion patterns</strong> to distinguish security personnel from potential attackers.</li>
@@ -436,15 +436,16 @@
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";
-            console.log("isProd:", isProd);
             const scripts_to_add = [
                 "/src/scripts/link-urls.js",
                 "/src/scripts/render-section.js",
-            ]
-            scripts_to_add.forEach(element => {
+            ];
+            scripts_to_add.forEach(src => {
                 const script = document.createElement("script");
-                script.src = (isProd ? "/me" : "") + element;
-                script.defer = true; // optional, ensures it executes after parsing
+                script.src = (isProd ? "/me" : "") + src;
+                script.onload = () => {
+                    console.log("Script loaded:", src);
+                };
                 document.body.appendChild(script);
             });
         })();

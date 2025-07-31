@@ -305,15 +305,16 @@
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";
-            console.log("isProd:", isProd);
             const scripts_to_add = [
                 "/src/scripts/link-urls.js",
                 "/src/scripts/render-section.js",
-            ]
-            scripts_to_add.forEach(element => {
+            ];
+            scripts_to_add.forEach(src => {
                 const script = document.createElement("script");
-                script.src = (isProd ? "/me" : "") + element;
-                script.defer = true; // optional, ensures it executes after parsing
+                script.src = (isProd ? "/me" : "") + src;
+                script.onload = () => {
+                    console.log("Script loaded:", src);
+                };
                 document.body.appendChild(script);
             });
         })();

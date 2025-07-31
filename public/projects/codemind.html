@@ -108,14 +108,14 @@
     <main class="mx-auto min-h-screen w-full max-w-screen-lg llm-section">
         <div class="mt-8 mb-12"><h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight" style="opacity: 1; transform: none;">🚀 CodeMind: AI-Powered Code Intelligence Platform</h1></div><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a full-stack platform designed to revolutionize the way developers interact with their code. By combining deep learning, natural language processing, and seamless user experience, CodeMind transforms codebases into interactive, explorable knowledge systems. Whether you're exploring a legacy repository or onboarding a new project, CodeMind provides instant, intelligent insights—powered by cutting-edge large language models.</p>
 
-<section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="what-is-codemind"><h2 class="text-[1.7rem] font-[750] mb-4">🧠 What is CodeMind?</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a smart code exploration and analysis system that brings <strong>LLM-assisted understanding</strong>, <strong>semantic search</strong>, and <strong>interactive Q&amp;A</strong> to your programming projects. It consists of:</p>
+<section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="what-is-codemind"><h2 class="text-[1.7rem] font-[750] mb-4">🧠 What is CodeMind?</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>CodeMind</strong> is a smart code exploration and analysis system that brings <strong>LLM-assisted understanding</strong>, <strong>semantic search</strong>, and <strong>interactive Q&amp;A</strong> to your programming projects. It consists of:</p>
 <ul class="list-disc pl-12 space-y-0">
 <li>⚙️ A <strong>FastAPI backend</strong> with agentic workflow architecture powered by <strong>ReactAgent</strong>, capable of intelligent multi-step reasoning and tool chaining.</li>
 <li>💻 A <strong>Streamlit frontend</strong> that provides a beautiful, user-friendly dashboard to query and visualize your code with the help of AI.</li>
 </ul>
 <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Together, they create a <strong>developer assistant</strong> that feels like pair programming with a genius collaborator.</p>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="key-capabilities"><h2 class="text-[1.7rem] font-[750] mb-4">✨ Key Capabilities</h2><h3 class="font-bold mt-6">🧠 Agentic Workflows with ReactAgent</h3>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="key-capabilities"><h2 class="text-[1.7rem] font-[750] mb-4">✨ Key Capabilities</h2><h3 class="font-bold mt-6">🧠 Agentic Workflows with ReactAgent</h3>
 <ul class="list-disc pl-12 space-y-0">
 <li><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6"><strong>Dynamic Tool Selection</strong><br/>
 CodeMind leverages <strong>ReactAgent</strong> to intelligently break down complex tasks into smaller, manageable steps. It dynamically selects and sequences the most relevant tools to complete multi-part instructions effectively.</p>
@@ -199,7 +199,7 @@ Seamlessly handles large repositories and background jobs.</p>
 </li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="use-cases"><h2 class="text-[1.7rem] font-[750] mb-4">💡 Use Cases</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="use-cases"><h2 class="text-[1.7rem] font-[750] mb-4">💡 Use Cases</h2><ul class="list-disc pl-12 space-y-0">
 <li><strong>Developer Onboarding</strong></li>
 <li><strong>Legacy Codebase Exploration</strong></li>
 <li><strong>Automated Documentation Generation</strong></li>
@@ -207,7 +207,7 @@ Seamlessly handles large repositories and background jobs.</p>
 <li><strong>Interactive Architecture Diagrams</strong></li>
 </ul>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="why-codemind"><h2 class="text-[1.7rem] font-[750] mb-4">🌟 Why CodeMind?</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">CodeMind isn’t just a code viewer. It’s a smart, extensible, AI-native platform that helps you <strong>understand</strong>, <strong>document</strong>, and <strong>work with</strong> your code—not just look at it.</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="why-codemind"><h2 class="text-[1.7rem] font-[750] mb-4">🌟 Why CodeMind?</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">CodeMind isn’t just a code viewer. It’s a smart, extensible, AI-native platform that helps you <strong>understand</strong>, <strong>document</strong>, and <strong>work with</strong> your code—not just look at it.</p>
 </section>
     </main>
 
@@ -259,15 +259,16 @@ Seamlessly handles large repositories and background jobs.</p>
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";
-            console.log("isProd:", isProd);
             const scripts_to_add = [
                 "/src/scripts/link-urls.js",
                 "/src/scripts/render-section.js",
-            ]
-            scripts_to_add.forEach(element => {
+            ];
+            scripts_to_add.forEach(src => {
                 const script = document.createElement("script");
-                script.src = (isProd ? "/me" : "") + element;
-                script.defer = true; // optional, ensures it executes after parsing
+                script.src = (isProd ? "/me" : "") + src;
+                script.onload = () => {
+                    console.log("Script loaded:", src);
+                };
                 document.body.appendChild(script);
             });
         })();
