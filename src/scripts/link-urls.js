@@ -10,17 +10,15 @@ const urls = {
     email: "mailto:naumanhsa@gmail.com"
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Link URLs script loaded");
-    document.querySelectorAll('.dynamic-link').forEach(link => {
-        console.log("Processing link:", link);
-        const id = link.dataset.urlid;
-        const url = urls[id]
-        const originalHref = link.getAttribute('href');
-        if (originalHref && originalHref.startsWith('#')) {
-            link.setAttribute('href', url + originalHref);
-        } else {
-            link.href = url;
-        }
-    });
+console.log("Link URLs script loaded");
+document.querySelectorAll('.dynamic-link').forEach(link => {
+    console.log("Processing link:", link);
+    const id = link.dataset.urlid;
+    const url = urls[id]
+    const originalHref = link.getAttribute('href');
+    if (originalHref && originalHref.startsWith('#')) {
+        link.setAttribute('href', url + originalHref);
+    } else {
+        link.href = url;
+    }
 });
