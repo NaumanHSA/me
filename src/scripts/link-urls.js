@@ -11,7 +11,9 @@ const urls = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Link URLs script loaded");
     document.querySelectorAll('.dynamic-link').forEach(link => {
+        console.log("Processing link:", link);
         const id = link.dataset.urlid;
         const url = urls[id]
         const originalHref = link.getAttribute('href');
