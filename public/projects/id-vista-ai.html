@@ -108,7 +108,7 @@
     <main class="mx-auto min-h-screen w-full max-w-screen-lg llm-section">
         <div class="mt-8 mb-12"><h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight" style="opacity: 1; transform: none;">📄 ID Vista AI</h1></div><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">An advanced, production-ready document analysis engine built with FastAPI and OpenCV. This tool performs end-to-end intelligent document understanding using deep learning models for document detection, type classification, orientation correction, field-level information extraction, and multi-language OCR.</p>
 
-<section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="overview"><h2 class="text-[1.7rem] font-[750] mb-4">🚀 Overview</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">This application processes official identification documents such as:</p>
+<section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="overview"><h2 class="text-[1.7rem] font-[750] mb-4">🚀 Overview</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">This application processes official identification documents such as:</p>
 <ul class="list-disc pl-12 space-y-0">
 <li>Emirates ID (Old/New)</li>
 <li>GCC ID</li>
@@ -125,7 +125,7 @@
 <li>Returning processed images and structured metadata in JSON.</li>
 </ol>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="workflow"><h2 class="text-[1.7rem] font-[750] mb-4">🧠 Workflow</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The document pipeline consists of the following stages:</p>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="workflow"><h2 class="text-[1.7rem] font-[750] mb-4">🧠 Workflow</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The document pipeline consists of the following stages:</p>
 <table>
 <thead>
 <tr>
@@ -165,7 +165,7 @@
 </tbody>
 </table>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="tech-stack"><h2 class="text-[1.7rem] font-[750] mb-4">🔧 Tech Stack</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="tech-stack"><h2 class="text-[1.7rem] font-[750] mb-4">🔧 Tech Stack</h2><ul class="list-disc pl-12 space-y-0">
 <li><strong>FastAPI</strong> – High-performance RESTful API backend</li>
 <li><strong>OpenCV</strong> – Document alignment and image pre-processing</li>
 <li><strong>YOLOv8</strong> – For object detection, document type classification, and segmentation</li>
@@ -175,7 +175,7 @@
 </ul>
 
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="api-usage"><h2 class="text-[1.7rem] font-[750] mb-4">📤 API Usage</h2><h4>Request Body</h4>
+</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="api-usage"><h2 class="text-[1.7rem] font-[750] mb-4">📤 API Usage</h2><h4>Request Body</h4>
 <pre><code class="code-block">{
   "requestId": "12345",
   "document": "&lt;base64 front image&gt;",
@@ -253,7 +253,7 @@
 }
 </code></pre>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="supported-features"><h2 class="text-[1.7rem] font-[750] mb-4">🛠 Supported Features</h2><ul class="list-disc pl-12 space-y-0">
+</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="supported-features"><h2 class="text-[1.7rem] font-[750] mb-4">🛠 Supported Features</h2><ul class="list-disc pl-12 space-y-0">
 <li>✅ Document detection &amp; alignment</li>
 <li>✅ Orientation correction (0°, 90°, 180°, 270°)</li>
 <li>✅ Multi-type classification (up to 15 document classes)</li>
@@ -324,7 +324,7 @@
         })();
         // Define your URLs here
         const urls = {
-            website: "",
+            website: "https://naumanhsa.github.io/me/",
             // website: "http://127.0.0.1:5500/",
             linkedin: "https://www.linkedin.com/in/nomihsa965/",
             resume: "https://yourwebsite.com/resume.pdf",
@@ -333,10 +333,7 @@
             fiverr: "https://www.fiverr.com/naumanhsa965",
             email: "mailto:naumanhsa@gmail.com"
         };
-
-        console.log("Link URLs script loaded");
         document.querySelectorAll('.dynamic-link').forEach(link => {
-            console.log("Processing link:", link);
             const id = link.dataset.urlid;
             const url = urls[id]
             const originalHref = link.getAttribute('href');

@@ -269,7 +269,7 @@ Seamlessly handles large repositories and background jobs.</p>
         })();
         // Define your URLs here
         const urls = {
-            website: "",
+            website: "https://naumanhsa.github.io/me/",
             // website: "http://127.0.0.1:5500/",
             linkedin: "https://www.linkedin.com/in/nomihsa965/",
             resume: "https://yourwebsite.com/resume.pdf",
@@ -278,10 +278,7 @@ Seamlessly handles large repositories and background jobs.</p>
             fiverr: "https://www.fiverr.com/naumanhsa965",
             email: "mailto:naumanhsa@gmail.com"
         };
-
-        console.log("Link URLs script loaded");
         document.querySelectorAll('.dynamic-link').forEach(link => {
-            console.log("Processing link:", link);
             const id = link.dataset.urlid;
             const url = urls[id]
             const originalHref = link.getAttribute('href');
