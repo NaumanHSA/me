@@ -106,77 +106,104 @@
 
     <!-- Main Content -->
     <main class="mx-auto min-h-screen w-full max-w-screen-lg llm-section">
-        <div class="mt-8 mb-12"><h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight" style="opacity: 1; transform: none;">📄 ID Vista AI</h1></div><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">An advanced, production-ready document analysis engine built with FastAPI and OpenCV. This tool performs end-to-end intelligent document understanding using deep learning models for document detection, type classification, orientation correction, field-level information extraction, and multi-language OCR.</p>
+        <div class="mt-8 mb-12">
+            <h1 class="mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
+                style="opacity: 1; transform: none;">📄 ID Vista AI</h1>
+        </div>
+        <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">An advanced, production-ready document analysis
+            engine built with FastAPI and OpenCV. This tool performs end-to-end intelligent document understanding using
+            deep learning models for document detection, type classification, orientation correction, field-level
+            information extraction, and multi-language OCR.</p>
 
-<section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="overview"><h2 class="text-[1.7rem] font-[750] mb-4">🚀 Overview</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">This application processes official identification documents such as:</p>
-<ul class="list-disc pl-12 space-y-0">
-<li>Emirates ID (Old/New)</li>
-<li>GCC ID</li>
-<li>Passports (50+ countries)</li>
-<li>Emirates Visas</li>
-</ul>
-<p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">It performs robust document parsing by:</p>
-<ol>
-<li>Detecting and segmenting the document.</li>
-<li>Correcting its orientation and aligning it.</li>
-<li>Classifying the document type.</li>
-<li>Extracting structured information (name, ID, DOB, etc.).</li>
-<li>Applying OCR (Optical Character Recognition) for English and Arabic.</li>
-<li>Returning processed images and structured metadata in JSON.</li>
-</ol>
+        <section
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="overview">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🚀 Overview</h2>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">This application processes official
+                identification documents such as:</p>
+            <ul class="list-disc pl-12 space-y-0">
+                <li>Emirates ID (Old/New)</li>
+                <li>GCC ID</li>
+                <li>Passports (50+ countries)</li>
+                <li>Emirates Visas</li>
+            </ul>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">It performs robust document parsing by:</p>
+            <ol>
+                <li>Detecting and segmenting the document.</li>
+                <li>Correcting its orientation and aligning it.</li>
+                <li>Classifying the document type.</li>
+                <li>Extracting structured information (name, ID, DOB, etc.).</li>
+                <li>Applying OCR (Optical Character Recognition) for English and Arabic.</li>
+                <li>Returning processed images and structured metadata in JSON.</li>
+            </ol>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="workflow"><h2 class="text-[1.7rem] font-[750] mb-4">🧠 Workflow</h2><p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The document pipeline consists of the following stages:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1. Document Segmentation</strong></td>
-<td>A YOLO-based model detects the document boundaries and corners.</td>
-</tr>
-<tr>
-<td><strong>2. Cropping &amp; Alignment</strong></td>
-<td>Using corner points, the document is transformed via affine warp to a canonical view.</td>
-</tr>
-<tr>
-<td><strong>3. Orientation Correction</strong></td>
-<td>A classifier checks for rotation and rotates the document upright.</td>
-</tr>
-<tr>
-<td><strong>4. Type Classification</strong></td>
-<td>A document classifier predicts whether it's a passport, visa, ID (new/old, front/back), or unknown.</td>
-</tr>
-<tr>
-<td><strong>5. Information Detection</strong></td>
-<td>Detection models identify key elements (photo, MRZ, signature, text regions).</td>
-</tr>
-<tr>
-<td><strong>6. OCR (EN/AR)</strong></td>
-<td>OCR is applied to the extracted regions using CRNN or PaddleOCR.</td>
-</tr>
-<tr>
-<td><strong>7. Response Generation</strong></td>
-<td>Final structured JSON response is generated, including images and text fields.</td>
-</tr>
-</tbody>
-</table>
+        </section>
+        <section class="mb-12 section-animate mb-6 mt-6 bg-white/10 backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="workflow">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🧠 Workflow</h2>
+            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-6">The document pipeline consists of the
+                following stages:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Document Segmentation</strong></td>
+                        <td>A YOLO-based model detects the document boundaries and corners.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Cropping &amp; Alignment</strong></td>
+                        <td>Using corner points, the document is transformed via affine warp to a canonical view.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Orientation Correction</strong></td>
+                        <td>A classifier checks for rotation and rotates the document upright.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Type Classification</strong></td>
+                        <td>A document classifier predicts whether it's a passport, visa, ID (new/old, front/back), or
+                            unknown.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Information Detection</strong></td>
+                        <td>Detection models identify key elements (photo, MRZ, signature, text regions).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. OCR (EN/AR)</strong></td>
+                        <td>OCR is applied to the extracted regions using CRNN or PaddleOCR.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>7. Response Generation</strong></td>
+                        <td>Final structured JSON response is generated, including images and text fields.</td>
+                    </tr>
+                </tbody>
+            </table>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="tech-stack"><h2 class="text-[1.7rem] font-[750] mb-4">🔧 Tech Stack</h2><ul class="list-disc pl-12 space-y-0">
-<li><strong>FastAPI</strong> – High-performance RESTful API backend</li>
-<li><strong>OpenCV</strong> – Document alignment and image pre-processing</li>
-<li><strong>YOLOv8</strong> – For object detection, document type classification, and segmentation</li>
-<li><strong>ONNX Runtime</strong> – Running inference for lightweight, high-speed models</li>
-<li><strong>PaddleOCR &amp; CRNN</strong> – For multi-language (English &amp; Arabic) OCR</li>
-<li><strong>Docker</strong> – Containerized deployment for production environments</li>
-</ul>
+        </section>
+        <section class="mb-12 section-animate mb-6 mt-6 shadow-2xl backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="tech-stack">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🔧 Tech Stack</h2>
+            <ul class="list-disc pl-12 space-y-0">
+                <li><strong>FastAPI</strong> – High-performance RESTful API backend</li>
+                <li><strong>OpenCV</strong> – Document alignment and image pre-processing</li>
+                <li><strong>YOLOv8</strong> – For object detection, document type classification, and segmentation</li>
+                <li><strong>ONNX Runtime</strong> – Running inference for lightweight, high-speed models</li>
+                <li><strong>PaddleOCR &amp; CRNN</strong> – For multi-language (English &amp; Arabic) OCR</li>
+                <li><strong>Docker</strong> – Containerized deployment for production environments</li>
+            </ul>
 
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="api-usage"><h2 class="text-[1.7rem] font-[750] mb-4">📤 API Usage</h2><h4>Request Body</h4>
-<pre><code class="code-block">{
+        </section>
+        <section
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-white-to-black backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="api-usage">
+            <h2 class="text-[1.7rem] font-[750] mb-4">📤 API Usage</h2>
+            <h4>Request Body</h4>
+            <pre><code class="code-block">{
   "requestId": "12345",
   "document": "&lt;base64 front image&gt;",
   "documentBack": "&lt;base64 back&gt;",
@@ -184,8 +211,8 @@
   "vis": false
 }
 </code></pre>
-<h4>Response</h4>
-<pre><code class="code-block">{
+            <h4>Response</h4>
+            <pre><code class="code-block">{
   "data": {
     "textFields": {
       "lastName": [
@@ -253,17 +280,22 @@
 }
 </code></pre>
 
-</section><section class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white" id="supported-features"><h2 class="text-[1.7rem] font-[750] mb-4">🛠 Supported Features</h2><ul class="list-disc pl-12 space-y-0">
-<li>✅ Document detection &amp; alignment</li>
-<li>✅ Orientation correction (0°, 90°, 180°, 270°)</li>
-<li>✅ Multi-type classification (up to 15 document classes)</li>
-<li>✅ English and Arabic OCR</li>
-<li>✅ Signature, MRZ, photo detection</li>
-<li>✅ Confidence scores per field</li>
-<li>✅ Auto-handling of unknown/unregistered documents</li>
-</ul>
+        </section>
+        <section
+            class="mb-12 section-animate mb-6 mt-6 bg-gradient-black-to-white backdrop-blur-md rounded-3xl p-4 sm:p-6 text-white"
+            id="supported-features">
+            <h2 class="text-[1.7rem] font-[750] mb-4">🛠 Supported Features</h2>
+            <ul class="list-disc pl-12 space-y-0">
+                <li>✅ Document detection &amp; alignment</li>
+                <li>✅ Orientation correction (0°, 90°, 180°, 270°)</li>
+                <li>✅ Multi-type classification (up to 15 document classes)</li>
+                <li>✅ English and Arabic OCR</li>
+                <li>✅ Signature, MRZ, photo detection</li>
+                <li>✅ Confidence scores per field</li>
+                <li>✅ Auto-handling of unknown/unregistered documents</li>
+            </ul>
 
-</section>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -314,6 +346,24 @@
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";
+            const scripts_to_add = [
+                "/src/scripts/link-urls.js",
+                "/src/scripts/render-section.js",
+            ];
+            scripts_to_add.forEach(src => {
+                const script = document.createElement("script");
+                script.src = (isProd ? "/me" : "") + src;
+                script.onload = () => {
+                    console.log("Script loaded:", src);
+                };
+                document.body.appendChild(script);
+            });
+        })();
+    </script>   
+
+    <!-- <script>
+        (function () {
+            const isProd = location.hostname === "naumanhsa.github.io";
             console.log("isProd:", isProd);
             const scripts_to_add = [
                 "/src/scripts/link-urls.js",
@@ -326,7 +376,7 @@
                 document.body.appendChild(script);
             });
         })();
-    </script>
+    </script> -->
 </body>
 
 </html>

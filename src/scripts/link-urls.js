@@ -10,13 +10,15 @@ const urls = {
     email: "mailto:naumanhsa@gmail.com"
 };
 
-document.querySelectorAll('.dynamic-link').forEach(link => {
-    const id = link.dataset.urlid;
-    const url = urls[id]
-    const originalHref = link.getAttribute('href');
-    if (originalHref && originalHref.startsWith('#')) {
-        link.setAttribute('href', url + originalHref);
-    } else {
-        link.href = url;
-    }
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.dynamic-link').forEach(link => {
+        const id = link.dataset.urlid;
+        const url = urls[id]
+        const originalHref = link.getAttribute('href');
+        if (originalHref && originalHref.startsWith('#')) {
+            link.setAttribute('href', url + originalHref);
+        } else {
+            link.href = url;
+        }
+    });
 });
