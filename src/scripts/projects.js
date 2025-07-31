@@ -1,18 +1,26 @@
 const projectsData = [ // Slide 1
     {
-        title: "codemind",
+        title: "Codemind",
         time: "February 24, 2022 - Now",
         datetime: "2022-02-24",
-        overview: `A full-stack system combining a FastAPI backend and Streamlit frontend to help developers analyze, explore, and understand codebases using LLMs. Features agentic workflows powered by ReactAgent, semantic vector search, and multi-model backend support including OpenAI, vLLM, llama.cpp, Transformers, and more..`,
+        overview: `A full-stack system combining a FastAPI backend and Streamlit frontend to help developers analyze, explore, and understand codebases using LLMs. Features agentic workflows powered by ReactAgent, semantic vector search, and multi-model backend support including OpenAI, vLLM, llama.cpp, unsloth, and transformers.`,
         techTags: ["python", "fastapi", "openai", "vllm", "llama", "huggingface"],
         moreLink: "public/projects/codemind.html"
+    },
+    {
+        title: "ID Vista AI",
+        time: "February 24, 2022 - Now",
+        datetime: "2022-02-24",
+        overview: `An advanced, production-ready document analysis engine built with FastAPI and OpenCV. This tool performs end-to-end intelligent document understanding using deep learning models for document detection, type classification, orientation correction, field-level information extraction, and multi-language OCR.`,
+        techTags: ["python", "fastapi", "pytorch", "opencv"],
+        moreLink: "public/projects/id-vista-ai.html"
     },
     {
         title: "OCR Data Toolkit",
         time: "Jan 10, 2021 - Dec 2021",
         datetime: "2021-01-10",
         overview: `A powerful Python toolkit for generating high-quality synthetic datasets for Optical Character Recognition (OCR) model training and evaluation. It enables generating realistic text images with configurable backgrounds, fonts, augmentations, and corresponding ground-truth labels—ideal for both academic research and production training pipelines.`,
-        techTags: ["python", "tensorflow", "opencv"],
+        techTags: ["python", "opencv"],
         moreLink: "public/projects/ocr_data_toolkit.html"
     },
     {
