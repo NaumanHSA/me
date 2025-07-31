@@ -287,14 +287,14 @@
             <div class="text-neutral-700 dark:text-neutral-400">
                 <p class="mb-2 mt-1 uppercase font-bold text-neutral-800 dark:text-white">Navigation</p>
                 <a target="_self"
-                    class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
-                    href="#home">Home</a>
+                    class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+                    href="#home" data-urlid="website">Home</a>
                 <a target="_self"
-                    class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
-                    href="#work-experience">Work Experience</a>
+                    class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+                    href="#work-experience" data-urlid="website">Work Experience</a>
                 <a target="_self"
-                    class="mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
-                    href="#projects">Featured Projects</a>
+                    class="dynamic-link mt-1 block duration-100 hover:text-neutral-700 hover:underline motion-reduce:transition-none dark:hover:text-neutral-300"
+                    href="#projects" data-urlid="website">Featured Projects</a>
             </div>
             <div class="text-neutral-700 dark:text-neutral-400">
                 <p class="mb-2 mt-1 font-bold text-neutral-800 dark:text-white">Find Me</p>
@@ -314,19 +314,39 @@
     <script>
         (function () {
             const isProd = location.hostname === "naumanhsa.github.io";
-            const scripts_to_add = [
-                "/src/scripts/link-urls.js",
-                "/src/scripts/render-section.js",
-            ];
-            scripts_to_add.forEach(src => {
-                const script = document.createElement("script");
-                script.src = (isProd ? "/me" : "") + src;
-                script.onload = () => {
-                    console.log("Script loaded:", src);
-                };
-                document.body.appendChild(script);
-            });
+            const link = "/src/scripts/render-section.js";
+            const script = document.createElement("script");
+            script.src = (isProd ? "/me" : "") + link;
+            script.onload = () => {
+                console.log("Script loaded:", link);
+            };
+            document.body.appendChild(script);
         })();
+        // Define your URLs here
+        const urls = {
+            website: "",
+            // website: "http://127.0.0.1:5500/",
+            linkedin: "https://www.linkedin.com/in/nomihsa965/",
+            resume: "https://yourwebsite.com/resume.pdf",
+            instagram: "https://instagram.com/nomihsa965",
+            github: "https://github.com/NaumanHSA",
+            fiverr: "https://www.fiverr.com/naumanhsa965",
+            email: "mailto:naumanhsa@gmail.com"
+        };
+
+        console.log("Link URLs script loaded");
+        document.querySelectorAll('.dynamic-link').forEach(link => {
+            console.log("Processing link:", link);
+            const id = link.dataset.urlid;
+            const url = urls[id]
+            const originalHref = link.getAttribute('href');
+            if (originalHref && originalHref.startsWith('#')) {
+                link.setAttribute('href', url + originalHref);
+            } else {
+                link.href = url;
+            }
+        });
+
     </script>
 </body>
 
