@@ -1,5 +1,13 @@
 const projectsData = [ // Slide 1
     {
+        title: "Neurosurfer",
+        time: "May 01, 2025 - Now",
+        datetime: "2025-05-01",
+        overview: `Neurosurfer is a modular framework that helps developers build agentic and retrieval-augmented applications by combining LLM reasoning, external tools, and knowledge retrieval into a unified workflow. It includes a FastAPI backend for serving chat and tool endpoints, and a React-based developer UI that works out of the box for rapid experimentation and deployment.`,
+        techTags: ["python", "fastapi", "openai", "vllm", "llama", "huggingface"],
+        moreLink: "https://github.com/NaumanHSA/neurosurfer"
+    },
+    {
         title: "Codemind",
         time: "February 24, 2022 - Now",
         datetime: "2022-02-24",

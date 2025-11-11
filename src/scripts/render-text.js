@@ -4,7 +4,7 @@ class LLMRenderer {
   constructor({
     containerSelector = ".llm-section",
     textSelector = ".render-llm-text",
-    typingSpeed = 20, // chars/sec
+    typingSpeed = 30, // chars/sec
     lineDelay = 300,
     rootMargin = "0px 0px -15% 0px",
     once = true,
